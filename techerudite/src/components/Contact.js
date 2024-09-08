@@ -2,14 +2,13 @@ import React, { useState } from "react";
 
 const Contact = () => {
   const [data, setData] = useState({
-    name: "",
-    lastName: "",
-    mail: "",
+    fname: "",
+    lname: "",
+    email: "",
     phone: "",
     budget: "",
     description: "",
   });
-  const [contacts, setContacts] = useState([]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,31 +20,26 @@ const Contact = () => {
 
   const handleCompanyData = async (e) => {
     e.preventDefault();
+console.log("data",data);
 
     try {
       const response = await fetch("http://3.7.81.243:3253/api/contact/send", {
         method: "POST",
-        body: JSON.stringify(data), 
+        body: JSON.stringify(data),
       });
 
       const result = await response.json();
       console.log("Response from API:", result);
 
       setData({
-        name: "",
-        lastName: "",
-        mail: "",
+        fname: "",
+        lname: "",
+        email: "",
         phone: "",
         budget: "",
         description: "",
       });
 
-    //   setContacts((prev) => [
-    //     ...prev,
-    //     {
-    //       ...data,
-    //     },
-    //   ]);
     } catch (error) {
       console.error("Error submitting data:", error);
     }
@@ -64,20 +58,20 @@ const Contact = () => {
             <input
               type="text"
               className="input"
-              id="name"
-              name="name"
+              id="fname"
+              name="fname"
               placeholder="Name"
-              value={data.name}
+              value={data.fname}
               onChange={handleInputChange}
             />
 
             <input
               type="text"
               className="input"
-              id="lastName"
-              name="lastName"
+              id="lname"
+              name="lname"
               placeholder="Last Name"
-              value={data.lastName}
+              value={data.lname}
               onChange={handleInputChange}
             />
           </div>
@@ -86,10 +80,10 @@ const Contact = () => {
             <input
               type="email"
               className="input"
-              id="mail"
-              name="mail"
+              id="email"
+              name="email"
               placeholder="Mail"
-              value={data.mail}
+              value={data.email}
               onChange={handleInputChange}
             />
 
