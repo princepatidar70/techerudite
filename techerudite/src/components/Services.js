@@ -6,7 +6,7 @@ const Services = () => {
       <h2 style={{ position: "relative", top: "10px", left: "60px" }}>
         Services
       </h2>
-      <div style={{display:'flex',flexWrap:'wrap',}}>
+      <div style={{display:'flex',flexWrap:'wrap', justifyContent:'center'}}>
         <div className="service-box">
           <div className="s-images">
             <img src={audit} alt="audit" width="100px" height="100px" />

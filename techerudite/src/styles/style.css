@@ -1,9 +1,9 @@
 body{
-    width: 1400px;
+    width: 1300px;
     margin: auto;
 }
 .main-div {
-    width: 1400px;
+    width: 1300px;
     height: 700px;
     background: url('../assets/_Layer_.png')
 }
@@ -11,7 +11,7 @@ body{
 .header-logo {
     position: absolute;
     top: 20px;
-    left: 100px;
+    left: 160px;
 }
 
 .header {
@@ -59,7 +59,7 @@ body{
     width: 332px;
     position: absolute;
     top: 160px;
-    left: 100px;
+    left: 160px;
     gap: 0px;
     border: 1px 0px 0px 0px;
     opacity: 0px;
@@ -90,7 +90,7 @@ body{
     height: 207px;
     position: absolute;
     top: 400px;
-    left: 100px;
+    left: 160px;
     opacity: 0px;
     background-color: #FFFFFF;
     border-radius: 10px;
@@ -193,7 +193,8 @@ body{
   .blogs-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
+    justify-content: center;
   }
   
   .blog-card {
